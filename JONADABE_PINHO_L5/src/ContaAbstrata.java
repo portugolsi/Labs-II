@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public abstract class ContaAbstrata{
    
     private double taxaServico;
-    private ArrayList<Pedido> pedidos;
+    private ArrayList<Pedido> pedidos = new ArrayList<Pedido>();
     
     
     public void adicionar(Pedido pedido){

@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -44,13 +47,22 @@ public class TesteRestaurante {
     conta2.adicionar(cardapio1.fazerPedido("Macarrão",3));
 
     conta3.adicionar(cardapio3.fazerPedido("Suco", 2));
-    conta3.adicionar(cardapio3.fazerPedido("Macarrão", 2));
+    conta3.adicionar(cardapio3.fazerPedido("feijão", 2));
     
     conta4.adicionar(cardapio2.fazerPedido("feijão", 1));
     conta4.adicionar(cardapio3.fazerPedido("Suco", 2));
     
     
-    ArrayList<ContaAbstrata> contas;
+    ArrayList<ContaAbstrata> contas = new ArrayList();
+    contas.add(conta1);
+    contas.add(conta2);
+    contas.add(conta3);
+    contas.add(conta4);
+    
+    for (ContaAbstrata conta : contas){
+        System.out.println(conta.taxaServico());
+    }
+    
     
     }
     
